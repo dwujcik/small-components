@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="X-Frame-Options" content="deny">
+
+  <title>Small components | danielwujcik.pl </title>
+  
+  <meta name="description" content="danielwujcik.pl">
+  <meta name="keywords" content="danielwujcik.pl">
+  <meta name="author" content="Handcrafted by danielwujcik.pl">
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta http-equiv="cache-control" content="max-age=0">
+
+  <link rel="icon" href="cdn/favicon.png">
+  <!--  Android 5 Chrome Color-->
+  <meta name="theme-color" content="#222">
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/sc.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Poppins:400,500,700&display=swap&subset=latin-ext" rel="stylesheet">
+  <link href="css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  
+</head>
+<body>
+    <div class="wrap">
+      <header>
+        <h1>Small Components</h1>
+      </header>
+
+        <article>
+          <div class="container p-5 l-5 r-5">
+              <h5 class="pb-2 pl-0 pr-0">Buttons</h5>
+            <div class="row">
+              
+              <button class="sc-button sc-lg">The button</button>
+             
+             
+          </div>
+        </div>
+      </article>
+
+          <div class="container text-center">
+          
+          </div>
+
+        <footer>
+          <div class="col-md-4">
+           <a href="https://danielwujcik.pl"><p>danielwujcik.pl</p></a>
+          </div>
+        </footer>
+      </div>
+        
+              <script src="./js/index.js"></script>
+      
+              <script src="js/jquery.min.js"></script>
+              <script src="js/bootstrap.min.js"></script>
+              <!-- <script src="js/lightbox-plus-jquery.min.js"></script> -->
+              <script src="js/feather.min.js"></script>
+              <script>
+              feather.replace()
+              </script>
+          <script>
+           // Tooltip function
+            $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+            });
+            //end /tooltip function
+          
+            // Smooth scrolling - disable scrooling slider
+            // Select all links with hashes
+            $('a[href*="#"]')
+              // Remove links that don't actually link to anything
+              .not('[href="#"]')
+              .not('[href="#0"]')
+              .click(function(event) {
+                // On-page links
+                if (
+                  location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                  &&
+                  location.hostname == this.hostname
+                ) {
+                  // Figure out element to scroll to
+                  var target = $(this.hash);
+                  target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                  // Does a scroll target exist?
+                  if (target.length) {
+                    // Only prevent default if animation is actually gonna happen
+                    event.preventDefault();
+                    $('html, body').animate({
+                      scrollTop: target.offset().top
+                    }, 1000, function() {
+                      // Callback after animation
+                      // Must change focus!
+                      var $target = $(target);
+                      $target.focus();
+                      if ($target.is(":focus")) { // Checking if the target was focused
+                        return false;
+                      } else {
+                        $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                        $target.focus(); // Set focus again
+                      };
+                    });
+                  }
+                }
+              });
+          
+            //end /smooth scrolling
+          
+            //Lightbox
+              // lightbox.option({
+              // 'resizeDuration': 200,
+              // 'wrapAround': true
+              // });
+            //end /Lightbox
+          </script>
+
+          
+              </body>
+          </html>
